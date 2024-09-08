@@ -43,25 +43,23 @@ const Sidebar = () => {
 
   return (
     <Box
-      sx={{
-        "& .ps-sidebar-container": {
+       sx={{
+        "& .pro-sidebar-inner": {
           background: `${colors.primary[400]} !important`,
         },
-        "& .ps-menu-icon": {
+        "& .pro-icon-wrapper": {
           backgroundColor: "transparent !important",
         },
-        "& .ps-inner-item": {
+        "& .pro-inner-item": {
           padding: "5px 35px 5px 20px !important",
         },
-        "& .ps-menu-button:hover": {
+        "& .pro-inner-item:hover": {
           color: "#868dfb !important",
-          backgroundColor: "transparent !important",
         },
-        "& .ps-menuitem-root .ps-active": {
+        "& .pro-menu-item.active": {
           color: "#6870fa !important",
         },
       }}
-
 
     >
       <ProSidebar collapsed={isCollapsed}>
