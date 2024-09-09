@@ -29,7 +29,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
       onClick={() => setSelected(title)}
       icon={icon}
     >
-      <Typography>{title}</Typography>
+      <Typography>{title}</Typography> 
       <Link to={to} />
     </MenuItem>
   );
@@ -97,7 +97,7 @@ const Sidebar = () => {
                   alt="profile-user"
                   width="100px"
                   height="100px"
-                  src={`../../assets/user.png`}
+                  src={`../../assets/user.png`}    
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
@@ -120,6 +120,15 @@ const Sidebar = () => {
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
             <Item
               title="Dashboard"
+              to="/"
+              icon={<HomeOutlinedIcon />}
+              selected={selected}
+              setSelected={setSelected}
+            />
+
+
+            <Item
+              title="Dashboard2"
               to="/"
               icon={<HomeOutlinedIcon />}
               selected={selected}
