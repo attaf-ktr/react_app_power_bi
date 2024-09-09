@@ -11,6 +11,13 @@ body,
   font-family: "Source Sans Pro", sans-serif;
 }
 
+
+.Embed-container {
+  height: 800px;
+  width: 1500px;
+}
+
+
 .app {
   display: flex;
   position: relative;
