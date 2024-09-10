@@ -7,7 +7,7 @@ const Dashboard2 = () => {
  
   
   const reportRef = useRef(null);
-
+  
   return (
     <PowerBIEmbed
       embedConfig={{
