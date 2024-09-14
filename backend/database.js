@@ -16,5 +16,19 @@ export async function getcustomers() {
     const [rows] = await pool.query("SELECT * FROM customers")
     return rows
   }
-  const customers = await getcustomers()
-  console.log(customers)
+
+export async function getcustomer(customer_code) {
+    const [rows] = await pool.query(`
+    SELECT * 
+    FROM customers
+    WHERE customer_code = ?  
+    `, [customer_code])
+    return rows[0]
+  }
+
+
+  
+
+
+  const customer = await getcustomer('Cus03')
+  console.log(customer)
