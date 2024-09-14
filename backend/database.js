@@ -1,10 +1,15 @@
 import mysql from 'mysql2'
 
+
+import dotenv from 'dotenv'
+dotenv.config()
+
+
 const pool = mysql.createPool({ //a pool is a collection of connections to the darabase ; 
-    host: '127.0.0.1',
-    user: 'root',
-    password: '1234sql@',
-    database: 'sales'
+    host: process.env.MYSQL_HOST,   //use env variables to hide sensetive infos ; also t wont be any prob if another pers want to use the code :)
+    user: process.env.MYSQL_USER,
+    password:  process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DATABASE
 }).promise() // to use the promise api version 
 
 export async function getcustomers() {
