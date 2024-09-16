@@ -26,9 +26,15 @@ export async function getcustomer(customer_code) {
     return rows[0]
   }
 
+  export async function createcustomer(customer_code,custmer_name, customer_type) {
+    const [result] = await pool.query(`
+    INSERT INTO customers (customer_code,custmer_name, customer_type)
+    VALUES (?, ?, ?)
+    `, [customer_code,custmer_name, customer_type])
+   
+    return result
+  }
 
-  
 
 
-  const customer = await getcustomer('Cus03')
-  console.log(customer)
+ 
